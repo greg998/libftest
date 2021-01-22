@@ -449,5 +449,6 @@ int main(int argc, char **argv)
 	ft_putchar_fd('b', 2);
 	ft_putstr_fd("onjour", 2);
 	ft_putendl_fd(" a tous", 2);
+	sleep(120);
 	return 0;
 }	

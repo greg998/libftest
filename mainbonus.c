@@ -83,11 +83,14 @@ int main (int argc, char **argv)
 
 	t_list *l2 = ft_lstmap(l, &f2, &del);	
 	char *str2 = list_to_str(l2);
-	if (!strcmp(str2, "234") && !strcmp(str, "123"))
+	if (!strcmp(str2, "234") && l2 != l)
 		printf("OK lstmap 234 %s\n", str2);
 	else
 		printf("BAD lstmap 234 %s\n", str2);
+	free(str);
+	free(str2);
 	ft_lstclear(&l, &del);
 	ft_lstclear(&l2, &del);
+	sleep(120);
 	return (0);
 }
